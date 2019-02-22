@@ -1,0 +1,9 @@
+ul {
+  list-style: none;
+  margin-left: 25px;
+}
+
+li {
+  float: left;
+  margin-right: 50px;
+}
