@@ -3,12 +3,12 @@ import Tab from './Tab/tab';
 
 import './menu.css'
 
-const Menu = ({ labels }) => {
+const Menu = ({ labels, onMenuBtnClick }) => {
 
   const Tabs = labels.map((label) => {
     return (
       <li key={label.id}>
-        <Tab label={label} />
+        <Tab label={label} onMenuBtnClick={onMenuBtnClick} />
       </li>
     )
   })

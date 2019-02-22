@@ -13,6 +13,12 @@ export default class Calculator extends Component {
     chosenOptions: [] //какие чекбоксы выбраны
   }
 
+  onMenuBtnClick = (id) => {
+    this.setState({
+      page: id
+    })
+  }
+
   render() {
     const data = pagesData;
     const {name} = data[this.state.page];
@@ -22,8 +28,8 @@ export default class Calculator extends Component {
 
     return (
       <div className="calculator clearfix">
-        <Menu labels={data} />
-        <CalcHeader name={name}/>
+        <Menu labels={data} onMenuBtnClick={this.onMenuBtnClick} />
+        <CalcHeader name={name} count={this.state.chosenOptions.length} />
         <Options options={options[this.state.page]} />
 
       </div>
