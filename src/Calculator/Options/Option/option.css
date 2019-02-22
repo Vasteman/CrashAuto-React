@@ -9,3 +9,7 @@
 .option:hover {
   background-color: #ccc;
 }
+
+.option.option-true {
+  background-color: rgb(154, 155, 241);
+}

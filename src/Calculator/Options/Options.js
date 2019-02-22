@@ -3,10 +3,14 @@ import Option from './Option/option'
 
 import './Options.css'
 
-const Options = ({ options }) => {
+const Options = ({ options, chosenOptions, onOptionClick }) => {
   const visibleOptions = options.map((opt) => {
-    return(
-      <Option key={opt} name={opt} />
+    return (
+      <Option
+        key={opt}
+        name={opt}
+        visability={chosenOptions[opt]}
+        onOptionClick={onOptionClick} />
     )
   })
   return (

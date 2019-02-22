@@ -10,7 +10,7 @@ export default class Calculator extends Component {
 
   state = {
     page: 0,  // 0-5
-    chosenOptions: [] //какие чекбоксы выбраны
+    chosenOptions: {} //какие чекбоксы выбраны
   }
 
   onMenuBtnClick = (id) => {
@@ -19,9 +19,18 @@ export default class Calculator extends Component {
     })
   }
 
+  onOptionClick = (id) => {
+    let obj = Object.assign({}, this.state.chosenOptions);
+    obj[id] = !this.state.chosenOptions[id];
+    console.log(obj)
+    this.setState({
+      chosenOptions: obj
+    })
+  }
+
   render() {
     const data = pagesData;
-    const {name} = data[this.state.page];
+    const { name } = data[this.state.page];
     const options = pagesData.map((el) => {
       return el.options;
     })
@@ -30,7 +39,9 @@ export default class Calculator extends Component {
       <div className="calculator clearfix">
         <Menu labels={data} onMenuBtnClick={this.onMenuBtnClick} />
         <CalcHeader name={name} count={this.state.chosenOptions.length} />
-        <Options options={options[this.state.page]} />
+        <Options  options={options[this.state.page]} 
+                  chosenOptions={this.state.chosenOptions}
+                  onOptionClick={this.onOptionClick} />
 
       </div>
     )
