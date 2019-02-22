@@ -15,12 +15,16 @@ export default class Calculator extends Component {
 
   render() {
     const data = pagesData;
+    const {name} = data[this.state.page];
+    const options = pagesData.map((el) => {
+      return el.options;
+    })
 
     return (
       <div className="calculator clearfix">
         <Menu labels={data} />
-        {/* <CalcHeader /> */}
-        {/* <Options /> */}
+        <CalcHeader name={name}/>
+        <Options options={options[this.state.page]} />
 
       </div>
     )

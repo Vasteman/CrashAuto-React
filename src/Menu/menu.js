@@ -13,7 +13,7 @@ const Menu = ({ labels }) => {
     )
   })
 
-  return <ul>{Tabs}</ul>
+  return <ul className="menu">{Tabs}</ul>
 }
 
 export default Menu;
