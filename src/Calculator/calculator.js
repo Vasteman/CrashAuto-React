@@ -28,34 +28,34 @@ export default class Calculator extends Component {
       chosenOptions: obj,
       countOfChosenOptions: this.getCountOfChosenOptions(obj)
     })
-}
-
-getCountOfChosenOptions = (obj) => {
-  let count = 0;
-  for (let key in obj) {
-    if (obj[key]) {
-      count++
-    }
   }
-  return count;
-}
 
-render() {
-  const data = pagesData;
-  const { name } = data[this.state.page];
-  const options = pagesData.map((el) => {
-    return el.options;
-  })
+  getCountOfChosenOptions = (obj) => {
+    let count = 0;
+    for (let key in obj) {
+      if (obj[key]) {
+        count++
+      }
+    }
+    return count;
+  }
 
-  return (
-    <div className="calculator clearfix">
-      <Menu labels={data} onMenuBtnClick={this.onMenuBtnClick} />
-      <CalcHeader name={name} count={this.state.countOfChosenOptions} />
-      <Options options={options[this.state.page]}
-        chosenOptions={this.state.chosenOptions}
-        onOptionClick={this.onOptionClick} />
+  render() {
+    const data = pagesData;
+    const { name } = data[this.state.page];
+    const options = pagesData.map((el) => {
+      return el.options;
+    })
 
-    </div>
-  )
-}
+    return (
+      <div className="calculator clearfix">
+        <Menu labels={data} onMenuBtnClick={this.onMenuBtnClick} />
+        <CalcHeader name={name} count={this.state.countOfChosenOptions} />
+        <Options options={options[this.state.page]}
+          chosenOptions={this.state.chosenOptions}
+          onOptionClick={this.onOptionClick} />
+
+      </div>
+    )
+  }
 }
