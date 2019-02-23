@@ -1,5 +1,5 @@
 import React from 'react';
-import Option from './Option/option'
+import Option from './Option'
 
 import './Options.css'
 
@@ -13,6 +13,7 @@ const Options = ({ options, chosenOptions, onOptionClick }) => {
         onOptionClick={onOptionClick} />
     )
   })
+
   return (
     <div className="calc-options">
       {visibleOptions}
