@@ -1,0 +1,16 @@
+.option {
+  max-width: 200px;
+  padding: 15px;
+  border: 2px solid black;
+  border-radius: 30px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #ccc;
+}
+
+.option.option-true {
+  background-color: rgb(154, 155, 241);
+}

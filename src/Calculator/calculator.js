@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import LeftCalculatorForm from "./LeftCalculatorForm/LeftCalculatorForm";
 import Menu from "../Menu/menu";
 import CalcHeader from "./CalcHeader/CalcHeader";
 import Options from "./Options/Options";
@@ -18,20 +19,7 @@ export default class Calculator extends Component {
     const { totalPrice, chosenOptions } = this.state;
     return (
       <div className="calc-block clearfix">
-        <div className="left-part">
-          <h3>Рассчитайте примерную стоимость</h3>
-          <div className="form-container">
-            <label>
-              Ваш телефон
-              <input type="tel" placeholder="+79896279597" />
-            </label>
-            <label>
-              Рыночная стоимость автомобиля
-              <input type="number" placeholder="800000" />
-            </label>
-          </div>
-          <div className="drag-n-drop">Перетащите фото сюда или загрузите</div>
-        </div>
+        <LeftCalculatorForm />
         <div className="right-part">
           <div className="calculator">
             <Menu
@@ -50,7 +38,7 @@ export default class Calculator extends Component {
         <div className="total-line">
           <div className="total-price">
             <h3>
-              Итого: <span>{this.state.totalPrice}</span>
+              Итого: <span>{totalPrice}</span>
             </h3>
           </div>
 

@@ -1,0 +1,6 @@
+.calc-options {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 250px;
+}
