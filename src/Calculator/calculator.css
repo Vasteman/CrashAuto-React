@@ -1,7 +1,99 @@
+.calc-block {
+  padding-top: 80px;
+  width: 100%;
+  background: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
 .calculator {
-  background-color: #eee;
-  max-width: 40%;
+  background-color: #e9e9e9;
+  width: 584px;
   padding: 10px 0;
   border-radius: 10px;
-  margin: 0 auto;
+  margin-left: auto;
+}
+
+.left-part {
+  margin-right: auto;
+  width: 550px;
+  box-sizing: border-box;
+}
+
+.calc-block h3 {
+  font-family: Gotham Pro;
+  line-height: 40px;
+  font-size: 30px;
+  max-width: 370px;
+  margin-bottom: 55px;
+
+  color: #333333;
+}
+
+.drag-n-drop {
+  width: 90%;
+  height: 172px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 2px dashed blue;
+  border-radius: 5px;
+  margin-bottom: 80px;
+}
+
+.left-part .form-container {
+  display: flex;
+  justify-content: space-between;
+}
+.left-part label {
+  width: 45%;
+  display: block;
+  font-family: Gotham Pro;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 19px;
+  font-size: 12px;
+  margin-bottom: 25px;
+
+  color: #7e7979;
+}
+.left-part input {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding: 11px;
+}
+
+.total-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.total-line .total-price {
+  width: 50%;
+}
+
+.calc-block .btn {
+  width: auto;
+}
+
+.calc-block .btn-calc-false {
+  opacity: 0.3;
+  cursor: pointer;
+}
+.calc-block .btn-calc-false:hover {
+  transform: scale(2);
+  transition: 0.3s;
+}
+.calc-block .btn-calc-true {
+  opacity: 1;
+  transform: scale(1.5);
+  cursor: pointer;
 }

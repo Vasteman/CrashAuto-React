@@ -1,0 +1,35 @@
+.promo {
+  /*background: url("../images/promo/evacuator.svg") no-repeat 0 0;*/
+  position: relative;
+}
+
+.promo h2 {
+  margin-top: 120px;
+  margin-bottom: 40px;
+  max-width: 610px;
+}
+
+.promo p {
+  /*
+  font-style: normal;
+  font-weight: normal;
+  line-height: 24px;
+  font-size: 16px;
+  
+  color: #000000;
+  */
+  max-width: 420px;
+  margin-bottom: 40px;
+}
+
+.promo .btn {
+  float: left;
+  margin-bottom: 20%;
+}
+
+.promo img {
+  position: absolute;
+  right: -15.99%;
+  bottom: -39%;
+  z-index: -1;
+}

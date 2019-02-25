@@ -6,9 +6,31 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #f9f9f9;
+  overflow-x: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h2 {
+  margin: 0;
+  font-family: Gotham Pro;
+  line-height: 60px;
+  font-size: 48px;
+
+  color: #3d3d3d;
+
+  border: 3px solid #f9f9f9;
+}
+
+p {
+  font-style: normal;
+  font-weight: normal;
+  line-height: 24px;
+  font-size: 16px;
+
+  color: #000000;
 }
