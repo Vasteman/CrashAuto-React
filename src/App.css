@@ -3,3 +3,27 @@
   display: table;
   clear: both;
 }
+
+@media (max-width: 1024px) {
+  .logo {
+    width: 170px;
+    height: 42px;
+  }
+  .header,
+  .phone {
+    line-height: 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 150px;
+    height: 38px;
+  }
+  .header,
+  .phone {
+    line-height: 14px;
+    font-size: 10px;
+  }
+}

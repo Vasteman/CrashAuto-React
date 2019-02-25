@@ -2,13 +2,13 @@ import React from "react";
 
 import "./option.css";
 
-const Option = ({ name, visability, onOptionClick }) => {
+const Option = ({ title, isChosen, onOptionClick }) => {
   return (
     <div
-      className={`option option-${visability}`}
-      onClick={() => onOptionClick(name)}
+      className={`option option-${isChosen}`}
+      onClick={() => onOptionClick(title)}
     >
-      {name}
+      {title}
     </div>
   );
 };

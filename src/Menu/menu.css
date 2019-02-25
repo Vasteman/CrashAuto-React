@@ -8,14 +8,6 @@ li {
   padding: 0;
 }
 
-.header ul {
-  margin-left: 25px;
-}
-
-.header li {
-  margin-right: 50px;
-}
-
 .calculator .menu {
   display: flex;
   flex-direction: row;

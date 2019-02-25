@@ -9,9 +9,24 @@ import "./calculator.css";
 export default class Calculator extends Component {
   state = {
     page: 0, // 0-5
-    chosenOptions: {}, //какие чекбоксы выбраны
-    countOfChosenOptions: 0
+    chosenOptions: []
   };
+
+  render() {
+    const { title, options } = pagesData[this.state.page];
+    const { chosenOptions } = this.state;
+    return (
+      <div className="calculator clearfix">
+        <Menu labels={pagesData} onMenuBtnClick={this.onMenuBtnClick} />
+        <CalcHeader title={title} count={chosenOptions.length} />
+        <Options
+          options={options}
+          chosenOptions={chosenOptions}
+          onOptionClick={this.onOptionClick}
+        />
+      </div>
+    );
+  }
 
   onMenuBtnClick = id => {
     this.setState({
@@ -19,43 +34,15 @@ export default class Calculator extends Component {
     });
   };
 
-  onOptionClick = id => {
-    let obj = { ...this.state.chosenOptions };
-    obj[id] = !this.state.chosenOptions[id];
-    console.log(obj);
-    this.setState({
-      chosenOptions: obj,
-      countOfChosenOptions: this.getCountOfChosenOptions(obj)
-    });
-  };
-
-  getCountOfChosenOptions = obj => {
-    let count = 0;
-    for (let key in obj) {
-      if (obj[key]) {
-        count++;
-      }
+  onOptionClick = name => {
+    let newChosenOptions = [...this.state.chosenOptions];
+    if (newChosenOptions.includes(name)) {
+      newChosenOptions.splice(newChosenOptions.indexOf(name), 1);
+    } else {
+      newChosenOptions.push(name);
     }
-    return count;
-  };
-
-  render() {
-    const data = pagesData;
-    const { name } = data[this.state.page];
-    const options = pagesData.map(el => {
-      return el.options;
+    this.setState({
+      chosenOptions: newChosenOptions
     });
-
-    return (
-      <div className="calculator clearfix">
-        <Menu labels={data} onMenuBtnClick={this.onMenuBtnClick} />
-        <CalcHeader name={name} count={this.state.countOfChosenOptions} />
-        <Options
-          options={options[this.state.page]}
-          chosenOptions={this.state.chosenOptions}
-          onOptionClick={this.onOptionClick}
-        />
-      </div>
-    );
-  }
+  };
 }

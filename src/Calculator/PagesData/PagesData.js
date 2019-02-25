@@ -8,7 +8,7 @@ import otherIcon from '../../images/other.svg'
 const pagesData = [
   {
     id: 0,
-    name: 'Двигатель',
+    title: 'Двигатель',
     icon: gearIcon,
     options: [
       'opt01', 'opt02', 'opt03', 'opt04'
@@ -16,7 +16,7 @@ const pagesData = [
   },
   {
     id: 1,
-    name: 'Трансмиссия',
+    title: 'Трансмиссия',
     icon: transmissionIcon,
     options: [
       'opt11', 'opt12', 'opt13', 'opt14'
@@ -24,7 +24,7 @@ const pagesData = [
   },
   {
     id: 2,
-    name: 'Кузов',
+    title: 'Кузов',
     icon: carBodyIcon,
     options: [
       'opt21', 'opt22', 'opt23', 'opt24'
@@ -32,7 +32,7 @@ const pagesData = [
   },
   {
     id: 3,
-    name: 'Салон',
+    title: 'Салон',
     icon: seatIcon,
     options: [
       'opt31', 'opt32', 'opt33', 'opt34'
@@ -40,7 +40,7 @@ const pagesData = [
   },
   {
     id: 4,
-    name: 'Some options',
+    title: 'Some options',
     icon: powerIcon,
     options: [
       'opt41', 'opt42', 'opt43', 'opt44'
@@ -48,7 +48,7 @@ const pagesData = [
   },
   {
     id: 5,
-    name: 'Other options',
+    title: 'Other options',
     icon: otherIcon,
     options: [
       'opt51', 'opt52', 'opt53', 'opt54'

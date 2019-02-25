@@ -1,24 +1,21 @@
-import React from 'react';
-import Option from './Option'
+import React from "react";
+import Option from "./Option";
 
-import './Options.css'
+import "./Options.css";
 
 const Options = ({ options, chosenOptions, onOptionClick }) => {
-  const visibleOptions = options.map((opt) => {
+  const visibleOptions = options.map(option => {
     return (
       <Option
-        key={opt}
-        name={opt}
-        visability={chosenOptions[opt]}
-        onOptionClick={onOptionClick} />
-    )
-  })
+        key={option}
+        title={option}
+        isChosen={chosenOptions.includes(option)}
+        onOptionClick={onOptionClick}
+      />
+    );
+  });
 
-  return (
-    <div className="calc-options">
-      {visibleOptions}
-    </div>
-  )
-}
+  return <div className="calc-options">{visibleOptions}</div>;
+};
 
-export default Options
+export default Options;

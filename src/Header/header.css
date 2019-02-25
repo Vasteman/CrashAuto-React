@@ -3,6 +3,33 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  
+  justify-content: space-between;
   flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.header ul {
+  margin-right: auto;
+  width: 50%;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+.header li {
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.header li:last-of-type {
+  margin-right: 0;
+}
+
+.header li:hover {
+  text-decoration: underline;
+}
+
+.header li:active {
+  opacity: 0.7;
 }
