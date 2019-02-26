@@ -81,7 +81,8 @@
     width: 100%;
   }
   .calculator {
-    width: 100%;
+    width: 70%;
+    margin: 0 auto;
   }
   .left-part .form-container {
     justify-content: space-around;
